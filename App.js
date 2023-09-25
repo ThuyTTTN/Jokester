@@ -1,11 +1,35 @@
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Colors from "./theme/Colors";
+import SignUp from "./component/SignUp";
+import Login from "./component/Login";
 
 export default function App() {
+  const [isSignedUp, setIsSignedUp] = useState(false);
+
+  const handleToggleForm = () => {
+    setIsSignedUp(!isSignedUp);
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>Jokester</Text>
+      <Text style={styles.titleStyle}>Jokester</Text>
+      <View style={styles.textWrapper}>
+        <TouchableOpacity onPress={() => setIsSignedUp(false)}>
+          <Text style={[styles.textStyle, !isSignedUp && styles.activeText]}>
+            Login
+          </Text>
+        </TouchableOpacity>
+        <Text style={styles.textStyle}> / </Text>
+        <TouchableOpacity onPress={() => setIsSignedUp(true)}>
+          <Text style={[styles.textStyle, isSignedUp && styles.activeText]}>
+            Sign Up
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      {isSignedUp ? <SignUp /> : <Login />}
       <StatusBar style="auto" />
     </View>
   );
@@ -18,9 +42,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-start",
   },
-  textStyle: {
+  titleStyle: {
     fontSize: 40,
     fontWeight: "bold",
     marginTop: "30%",
+  },
+  textStyle: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  activeText: {
+    textDecorationLine: "underline",
+  },
+  textWrapper: {
+    flex: 1,
+    flexDirection: "row",
   },
 });
