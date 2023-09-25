@@ -13,7 +13,7 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Login Page</Text>
+      {/* <Text>Login Page</Text> */}
       <View style={styles.innerContainer}>
         <TextInput
           style={styles.input}
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.chineseGold,
     alignItems: "center",
     width: "100%",
+    marginTop: "3%",
   },
   innerContainer: {
     width: "70%",

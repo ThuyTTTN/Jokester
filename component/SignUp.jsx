@@ -14,11 +14,25 @@ const SignUp = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Sign Up page</Text>
-      <View>
-        <TextInput placeholder="Name" value={name} onChangeText={setName} />
-        <TextInput placeholder="Email" value={email} onChangeText={setEmail} />
+      {/* <Text>Sign Up page</Text> */}
+      <View style={styles.innerContainer}>
         <TextInput
+          style={styles.input}
+          fontSize={18}
+          placeholder="Name"
+          value={name}
+          onChangeText={setName}
+        />
+        <TextInput
+          style={styles.input}
+          fontSize={18}
+          placeholder="Email"
+          value={email}
+          onChangeText={setEmail}
+        />
+        <TextInput
+          style={styles.input}
+          fontSize={18}
           placeholder="Password"
           value={password}
           onChangeText={setPassword}
@@ -33,9 +47,20 @@ export default SignUp;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     backgroundColor: Colors.chineseGold,
     alignItems: "center",
-    justifyContent: "flex-start",
+    width: "100%",
+    marginTop: "3%",
+  },
+  innerContainer: {
+    width: "70%",
+  },
+  input: {
+    marginVertical: 10,
+    height: 40,
+    borderColor: Colors.smokeyBlack,
+    borderWidth: 1,
+    paddingLeft: 5,
   },
 });

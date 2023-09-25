@@ -46,16 +46,16 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     marginTop: "30%",
+    marginBottom: "30%",
   },
   textStyle: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
   },
   activeText: {
     textDecorationLine: "underline",
   },
   textWrapper: {
-    flex: 1,
     flexDirection: "row",
   },
 });
