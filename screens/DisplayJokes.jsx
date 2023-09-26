@@ -5,21 +5,18 @@ import speechBubble from "../assets/images/speechBubble.png";
 
 const DisplayJokes = () => {
   const [joke, setJoke] = useState({});
-
-  useEffect(() => {
-    fetch("https://official-joke-api.appspot.com/random_joke")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log("joke json", json);
-        setJoke(json);
-      });
-  }, []);
-
   const { setup, punchline } = joke;
+
+  // useEffect(() => {
+  //   fetch("https://official-joke-api.appspot.com/random_joke")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       setJoke(json);
+  //     });
+  // }, []);
 
   return (
     <View style={styles.container}>
-      {/* <Text>Display Jokes here</Text> */}
       <View style={styles.speechContainer}>
         <Image source={speechBubble} />
       </View>
@@ -27,8 +24,7 @@ const DisplayJokes = () => {
         <Text style={styles.setupStyle}>{setup}</Text>
         <Text style={styles.punchlineStyle}>{punchline}</Text>
       </View>
-
-      <AnimalImages />
+      <AnimalImages setJoke={setJoke} />
     </View>
   );
 };
@@ -55,6 +51,7 @@ const styles = StyleSheet.create({
   punchlineStyle: {
     fontSize: 22,
     textAlign: "center",
+    marginTop: "2%",
   },
   speechContainer: {
     position: "absolute",

@@ -6,7 +6,7 @@ import dogBowtie from "../assets/images/dogBowtie.png";
 import khoala from "../assets/images/khoala.png";
 import pandaPartyHat from "../assets/images/pandaPartyHat.png";
 
-const AnimalImages = () => {
+const AnimalImages = ({ setJoke }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [shuffledImages, setShuffledImages] = useState([]);
 
@@ -14,8 +14,17 @@ const AnimalImages = () => {
     // Shuffling the images array initially
     const shuffled = shuffleArray(imageArray);
     setShuffledImages(shuffled);
+
+    fetchJoke();
   }, []);
 
+  const fetchJoke = () => {
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then((response) => response.json())
+      .then((json) => {
+        setJoke(json);
+      });
+  };
   let imageArray = [
     bunnySunglasses,
     catSunglasses,
@@ -42,6 +51,7 @@ const AnimalImages = () => {
     while (nextIndex === currentImageIndex) {
       nextIndex = Math.floor(Math.random() * imageArray.length);
     }
+    fetchJoke();
 
     setCurrentImageIndex(nextIndex);
   };
