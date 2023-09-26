@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Text, Button, StyleSheet, TextInput, View } from "react-native";
 import Colors from "../theme/Colors";
+import PrimaryButton from "./PrimaryButton";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -37,11 +38,7 @@ const SignUp = () => {
           value={password}
           onChangeText={setPassword}
         />
-        <Button
-          color={Colors.smokeyBlack}
-          title="Submit"
-          onPress={handleSignUp}
-        />
+        <PrimaryButton onPress={handleSignUp}>Submit</PrimaryButton>
       </View>
     </View>
   );
