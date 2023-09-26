@@ -15,7 +15,6 @@ const SignUp = () => {
 
   return (
     <View style={styles.container}>
-      {/* <Text>Sign Up page</Text> */}
       <View style={styles.innerContainer}>
         <TextInput
           style={styles.input}
@@ -49,7 +48,6 @@ export default SignUp;
 const styles = StyleSheet.create({
   container: {
     flex: 3,
-    // backgroundColor: Colors.chineseGold,
     alignItems: "center",
     width: "100%",
     marginTop: "3%",

@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import SignUp from "./component/SignUp";
 import Login from "./component/Login";
+import DisplayJokes from "./screens/DisplayJokes";
 
 export default function App() {
   const [isSignedUp, setIsSignedUp] = useState(false);
@@ -13,7 +14,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleStyle}>Jokester</Text>
+      <DisplayJokes />
+      {/* <Text style={styles.titleStyle}>Jokester</Text>
       <View style={styles.textWrapper}>
         <TouchableOpacity onPress={() => setIsSignedUp(false)}>
           <Text style={[styles.textStyle, !isSignedUp && styles.activeText]}>
@@ -29,7 +31,7 @@ export default function App() {
       </View>
 
       {isSignedUp ? <SignUp /> : <Login />}
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> */}
     </View>
   );
 }

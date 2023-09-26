@@ -14,7 +14,6 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      {/* <Text>Login Page</Text> */}
       <View style={styles.innerContainer}>
         <TextInput
           style={styles.input}
@@ -40,7 +39,6 @@ export default Login;
 const styles = StyleSheet.create({
   container: {
     flex: 3,
-    // backgroundColor: Colors.chineseGold,
     alignItems: "center",
     width: "100%",
     marginTop: "3%",
