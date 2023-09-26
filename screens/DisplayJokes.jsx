@@ -1,6 +1,7 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import AnimalImages from "../component/AnimalImages";
+import speechBubble from "../assets/images/speechBubble.png";
 
 const DisplayJokes = () => {
   const [joke, setJoke] = useState({});
@@ -19,8 +20,14 @@ const DisplayJokes = () => {
   return (
     <View style={styles.container}>
       {/* <Text>Display Jokes here</Text> */}
-      {/* <Text style={styles.setupStyle}>{setup}</Text>
-      <Text style={styles.punchlineStyle}>{punchline}</Text> */}
+      <View style={styles.speechContainer}>
+        <Image source={speechBubble} />
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.setupStyle}>{setup}</Text>
+        <Text style={styles.punchlineStyle}>{punchline}</Text>
+      </View>
+
       <AnimalImages />
     </View>
   );
@@ -31,17 +38,26 @@ export default DisplayJokes;
 const styles = StyleSheet.create({
   container: {
     flex: 3,
-    alignItems: "center",
-    // width: "80%",
     marginHorizontal: "5%",
-    justifyContent: "center",
-    textAlign: "center",
+  },
+  textContainer: {
+    position: "relative",
+    alignContent: "center",
+    top: "18%",
+    width: "72%",
+    left: "15%",
   },
   setupStyle: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: "bold",
+    textAlign: "center",
   },
   punchlineStyle: {
-    fontSize: 25,
+    fontSize: 22,
+    textAlign: "center",
+  },
+  speechContainer: {
+    position: "absolute",
+    top: "10%",
   },
 });
