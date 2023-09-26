@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, Button, StyleSheet, TextInput, View } from "react-native";
-import colors from "../theme/colors";
+import Colors from "../theme/Colors";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -39,7 +39,7 @@ export default Login;
 const styles = StyleSheet.create({
   container: {
     flex: 3,
-    // backgroundColor: colors.chineseGold,
+    // backgroundColor: Colors.chineseGold,
     alignItems: "center",
     width: "100%",
     marginTop: "3%",
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   input: {
     marginVertical: 10,
     height: 40,
-    borderColor: colors.smokeyBlack,
+    borderColor: Colors.smokeyBlack,
     borderWidth: 1,
     paddingLeft: 10,
     backgroundColor: "white",

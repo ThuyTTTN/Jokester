@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, Button, StyleSheet, TextInput, View } from "react-native";
-import colors from "../theme/colors";
+import Colors from "../theme/Colors";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -38,7 +38,7 @@ const SignUp = () => {
           onChangeText={setPassword}
         />
         <Button
-          color={colors.smokeyBlack}
+          color={Colors.smokeyBlack}
           title="Submit"
           onPress={handleSignUp}
         />
@@ -52,7 +52,7 @@ export default SignUp;
 const styles = StyleSheet.create({
   container: {
     flex: 3,
-    // backgroundColor: colors.chineseGold,
+    // backgroundColor: Colors.chineseGold,
     alignItems: "center",
     width: "100%",
     marginTop: "3%",
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   input: {
     marginVertical: 10,
     height: 40,
-    borderColor: colors.smokeyBlack,
+    borderColor: Colors.smokeyBlack,
     borderWidth: 1,
     paddingLeft: 10,
     backgroundColor: "white",

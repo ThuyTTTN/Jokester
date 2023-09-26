@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
   cintrine: "#dfc516", //lighter yellow
   chineseGold: "c7a90b",
   spanishGray: "#9F9598",
@@ -6,4 +6,4 @@ const colors = {
   pineapple: "#0F150B", //brown
 };
 
-export default colors;
+export default Colors;
