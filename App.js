@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Colors from "./theme/Colors";
+// import { colors } from "./theme/colors";
 import SignUp from "./component/SignUp";
 import Login from "./component/Login";
 
@@ -38,7 +38,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.chineseGold,
+    // backgroundColor: colors.chineseGold,
     alignItems: "center",
     justifyContent: "flex-start",
   },
