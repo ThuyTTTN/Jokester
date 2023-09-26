@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
+import Images from "../component/Images";
 
 const DisplayJokes = () => {
   const [joke, setJoke] = useState({});
@@ -18,8 +19,9 @@ const DisplayJokes = () => {
   return (
     <View style={styles.container}>
       {/* <Text>Display Jokes here</Text> */}
-      <Text style={styles.setupStyle}>{setup}</Text>
-      <Text style={styles.punchlineStyle}>{punchline}</Text>
+      {/* <Text style={styles.setupStyle}>{setup}</Text>
+      <Text style={styles.punchlineStyle}>{punchline}</Text> */}
+      <Images />
     </View>
   );
 };
