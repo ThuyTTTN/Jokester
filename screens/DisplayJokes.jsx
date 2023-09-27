@@ -2,11 +2,14 @@ import { Text, View, StyleSheet, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import AnimalImages from "../component/AnimalImages";
 import speechBubble from "../assets/images/speechBubble.png";
+import PrimaryButton from "../component/PrimaryButton";
 
-const DisplayJokes = () => {
+const DisplayJokes = ({ navigation }) => {
   const [joke, setJoke] = useState({});
   const { setup, punchline } = joke;
-
+  const handleNavigate = () => {
+    navigation.navigate("Onboarding");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.speechContainer}>

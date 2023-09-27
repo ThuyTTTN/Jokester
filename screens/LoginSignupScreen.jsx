@@ -2,13 +2,20 @@ import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import Login from "../component/Login";
 import SignUp from "../component/SignUp";
+import Colors from "../theme/Colors";
 
-const LoginSignupScreen = () => {
+const LoginSignupScreen = ({ navigation }) => {
   const [isSignedUp, setIsSignedUp] = useState(false);
 
   const handleToggleForm = () => {
     setIsSignedUp(!isSignedUp);
   };
+
+  const testingNavPress = () => {
+    console.log("test press");
+    navigation.navigate("Jokes");
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>Jokester</Text>
@@ -37,6 +44,7 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: Colors.cintrine,
   },
   titleStyle: {
     fontSize: 40,

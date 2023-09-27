@@ -3,7 +3,7 @@ import { Text, Button, StyleSheet, TextInput, View } from "react-native";
 import Colors from "../theme/Colors";
 import PrimaryButton from "./PrimaryButton";
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,6 +11,7 @@ const SignUp = () => {
   const handleSignUp = () => {
     //sign up logic here
     console.log("sign up", { name, email, password });
+    navigation.navigate("Jokes");
   };
 
   return (

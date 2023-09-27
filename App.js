@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React, { useState, useEffect, useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { StyleSheet, Text, View } from "react-native";
@@ -53,7 +53,7 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="LoginSignUp" component={LoginSignupScreen} />
+          <Stack.Screen name="Onboarding" component={LoginSignupScreen} />
           <Stack.Screen name="Jokes" component={DisplayJokes} />
         </Stack.Navigator>
       </NavigationContainer>

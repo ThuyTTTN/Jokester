@@ -10,6 +10,7 @@ const Login = () => {
   const handleLogin = () => {
     // Handle login logic here
     console.log("Login:", { email, password });
+    navigation.navigate("Jokes");
   };
 
   return (
