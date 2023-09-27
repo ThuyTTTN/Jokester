@@ -7,14 +7,6 @@ const DisplayJokes = () => {
   const [joke, setJoke] = useState({});
   const { setup, punchline } = joke;
 
-  // useEffect(() => {
-  //   fetch("https://official-joke-api.appspot.com/random_joke")
-  //     .then((response) => response.json())
-  //     .then((json) => {
-  //       setJoke(json);
-  //     });
-  // }, []);
-
   return (
     <View style={styles.container}>
       <View style={styles.speechContainer}>
@@ -44,12 +36,12 @@ const styles = StyleSheet.create({
     left: "15%",
   },
   setupStyle: {
-    fontSize: 25,
+    fontSize: 22,
     fontWeight: "bold",
     textAlign: "center",
   },
   punchlineStyle: {
-    fontSize: 22,
+    fontSize: 20,
     textAlign: "center",
     marginTop: "2%",
   },
