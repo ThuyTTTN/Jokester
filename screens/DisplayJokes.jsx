@@ -7,9 +7,7 @@ import PrimaryButton from "../component/PrimaryButton";
 const DisplayJokes = ({ navigation }) => {
   const [joke, setJoke] = useState({});
   const { setup, punchline } = joke;
-  const handleNavigate = () => {
-    navigation.navigate("Onboarding");
-  };
+
   return (
     <View style={styles.container}>
       <View style={styles.speechContainer}>
@@ -34,7 +32,7 @@ const styles = StyleSheet.create({
   textContainer: {
     position: "relative",
     alignContent: "center",
-    top: "18%",
+    top: "9%",
     width: "72%",
     left: "15%",
   },
@@ -50,6 +48,6 @@ const styles = StyleSheet.create({
   },
   speechContainer: {
     position: "absolute",
-    top: "10%",
+    top: "2%",
   },
 });
