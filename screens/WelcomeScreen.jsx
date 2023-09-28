@@ -11,7 +11,7 @@ const WelcomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.titleStyle}>Jokester</Text>
       <View style={styles.imageContainer}>
-        <Image source={dogSkateboard} style={styles.imageStyle} />
+        <Image source={dogSkateboard} />
       </View>
       <PrimaryButton onPress={handleOnPress} width={200} fontSize={25}>
         Let's GoOoo!
@@ -37,5 +37,4 @@ const styles = StyleSheet.create({
   imageContainer: {
     marginBottom: "10%",
   },
-  imageStyle: {},
 });

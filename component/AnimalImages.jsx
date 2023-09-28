@@ -5,6 +5,8 @@ import catSunglasses from "../assets/images/catSunglasses.png";
 import dogBowtie from "../assets/images/dogBowtie.png";
 import khoala from "../assets/images/khoala.png";
 import pandaPartyHat from "../assets/images/pandaPartyHat.png";
+import littleDog from "../assets/images/littleDog.png";
+import fox from "../assets/images/fox.png";
 
 const AnimalImages = ({ setJoke }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,6 +33,8 @@ const AnimalImages = ({ setJoke }) => {
     dogBowtie,
     khoala,
     pandaPartyHat,
+    littleDog,
+    fox,
   ];
 
   const shuffleArray = (array) => {

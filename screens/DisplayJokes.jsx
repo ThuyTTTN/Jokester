@@ -1,8 +1,7 @@
 import { Text, View, StyleSheet, Image } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AnimalImages from "../component/AnimalImages";
 import speechBubble from "../assets/images/speechBubble.png";
-import PrimaryButton from "../component/PrimaryButton";
 
 const DisplayJokes = ({ navigation }) => {
   const [joke, setJoke] = useState({});
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
   textContainer: {
     position: "relative",
     alignContent: "center",
-    top: "9%",
+    top: "10%",
     width: "72%",
     left: "15%",
   },
@@ -49,5 +48,6 @@ const styles = StyleSheet.create({
   speechContainer: {
     position: "absolute",
     top: "2%",
+    left: "3%",
   },
 });
