@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { StyleSheet, Text, View } from "react-native";
 import LoginSignupScreen from "./screens/LoginSignupScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
 import DisplayJokes from "./screens/DisplayJokes";
 
 // SplashScreen.preventAutoHideAsync();
@@ -52,8 +53,17 @@ export default function App() {
       {/* <View style={styles.container} onLayout={onLayoutRootView}> */}
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Onboarding" component={LoginSignupScreen} />
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#c7a90b" },
+            contentStyle: { backgroundColor: "#dfc516" },
+          }}
+        >
+          <Stack.Screen
+            name="Welcome"
+            component={WelcomeScreen}
+            options={{ title: "" }}
+          />
           <Stack.Screen name="Jokes" component={DisplayJokes} />
         </Stack.Navigator>
       </NavigationContainer>
